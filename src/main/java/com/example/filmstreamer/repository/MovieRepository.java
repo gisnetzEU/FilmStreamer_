@@ -11,4 +11,7 @@ public interface MovieRepository extends CrudRepository<Movie, UUID> {
 
     Optional<Iterable<Movie>> findMoviesByTitle(String title);
 
+    Optional<Iterable<Movie>> findMoviesByTitleContainsIgnoreCase(String title);
+
+
 }

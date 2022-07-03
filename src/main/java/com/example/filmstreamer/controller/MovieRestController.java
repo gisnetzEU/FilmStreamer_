@@ -67,7 +67,7 @@ public class MovieRestController {
     //CRUD: read, find movies by title
     @GetMapping(path = "/getMoviesByTitle/{title}")
     public ResponseEntity<Iterable<Movie>> findMoviesByTitle(@PathVariable String title) {
-        Optional<Iterable<Movie>> moviesFound = movieservice.findMoviesByTitle(title);
+        Optional<Iterable<Movie>> moviesFound = movieservice.findMoviesByTitleContains(title);
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("operation", "getMoviesByTitle");

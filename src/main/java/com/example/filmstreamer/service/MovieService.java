@@ -46,8 +46,8 @@ public class MovieService {
         }
     }
 
-    public Optional<Iterable<Movie>> findMoviesByTitle(String title){
-        return movieRepository.findMoviesByTitle(title);
+    public Optional<Iterable<Movie>> findMoviesByTitleContains(String title){
+        return movieRepository.findMoviesByTitleContainsIgnoreCase(title);
     }
 
     public Optional<Movie> deleteMovieByTitle(String title){
